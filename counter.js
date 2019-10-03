@@ -1,6 +1,9 @@
 
 const counter = (function () {
-  let number = 0;
+
+  const numberStorage = JSON.parse(localStorage.getItem('numberStorage')) || 0
+
+  let number = +numberStorage;
 
   const inc = function () {
   number += 1
@@ -11,6 +14,8 @@ const counter = (function () {
 
   const render = function () {
   
+    localStorage.setItem('numberStorage',JSON.stringify(number))
+
   document.body.innerText = ''
 
   const button = document.createElement('button')
