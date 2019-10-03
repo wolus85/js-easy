@@ -16,7 +16,7 @@ const lastname = askForLastName()
 let hello = window.alert(`Hello ${name} ${lastname}`)
 
 
-const addP = function () {
+const addPerson = function () {
 
   const persondata = name + ' ' + lastname
   console.log(persondata)
@@ -28,7 +28,7 @@ const addP = function () {
 }
 
 
-addP()
+addPerson()
 
 
 
