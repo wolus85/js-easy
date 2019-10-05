@@ -6,28 +6,28 @@ const counter = (function () {
   let number = +numberStorage;
 
   const inc = function () {
-  number += 1
+    number += 1
 
-  render()
+    render()
   }
 
 
   const render = function () {
-  
-    localStorage.setItem('numberStorage',JSON.stringify(number))
 
-  document.body.innerText = ''
+    localStorage.setItem('numberStorage', JSON.stringify(number))
 
-  const button = document.createElement('button')
-  const h1 = document.createElement('h1')
+    document.body.innerText = ''
 
-  button.innerText = '+'
-  h1.innerText = number
+    const button = document.createElement('button')
+    const h1 = document.createElement('h1')
 
-  document.body.appendChild(button)
-  document.body.appendChild(h1)
+    button.innerText = '+'
+    h1.innerText = number
 
-  button.addEventListener('click', inc)
+    document.body.appendChild(button)
+    document.body.appendChild(h1)
+
+    button.addEventListener('click', inc)
 
 
   }

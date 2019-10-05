@@ -1,7 +1,8 @@
-velocity=20
+velocity = 20
 time = 40
-position =
+position = 0
 
 
 
-move
+
+const move = function

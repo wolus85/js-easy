@@ -1,4 +1,4 @@
-let arrayOfPeople = JSON.parse(localStorage.getItem('person'))||[]
+let arrayOfPeople = JSON.parse(localStorage.getItem('person')) || []
 
 const askForName = function () {
   const name = window.prompt('Write Your Name')
@@ -20,11 +20,11 @@ const addPerson = function () {
 
   const persondata = name + ' ' + lastname
   console.log(persondata)
- 
+
   arrayOfPeople.push(persondata)
   console.log(arrayOfPeople)
 
-  localStorage.setItem('person',JSON.stringify(arrayOfPeople))
+  localStorage.setItem('person', JSON.stringify(arrayOfPeople))
 }
 
 
