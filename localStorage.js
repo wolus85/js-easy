@@ -1,30 +1,20 @@
-let people = JSON.parse(localStorage.getItem('person')) || []
+let people = JSON.parse(localStorage.getItem('people')) || []
 
+const render = function () {
+  localStorage.setItem('people', JSON.stringify(people))
+  people.filter(function (el) { el.car && el.car.model && console.log(el.car.model) })
 
-function render() {
-  localStorage.setItem('person', JSON.stringify(people))
-  for (let i = 0; i < people.length; i++) {
-    people[i] && people[i].name && people[i].lastName && people[i].car.model &&
-      console.log(people[i])
-  }
 }
-
-
-function add(name, lastName, model) {
+const addPerson = function (name, lastname, model) {
 
   const newPerson = {
     name: name,
-    lastName: lastName,
-    car: {
-      model: model
-    }
+    lastname: lastname,
+    car: { model: model }
   }
 
   people = people.concat(newPerson)
 
-
-
   render()
+
 }
-
-
